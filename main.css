@@ -13,7 +13,7 @@
 	/* Font customization */
 	--font: 'Roboto';
 	/* Top left corner text */
-	--corner-text: 'CXRVO';
+	--corner-text: 'Nyx';
 	/* Status indicators and window controls */
 	--online-indicator: hsl(115, 100%, 50%);
 	--dnd-indicator: hsl(0, 100%, 50%);
