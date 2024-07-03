@@ -162,7 +162,7 @@ div.message_d5deea.replying_d5deea::before {
 .container_b2ca13,
 .numberBadge_df8943,
 .toolbar_e44302 {
-	--status-danger: var(--accent-2);
+	--status-danger: var(--dnd-indicator);
 }
 
 .expandedFolderIconWrapper_bc7085>svg[style="color: rgb(88, 101, 242);"] {
@@ -172,7 +172,7 @@ div.message_d5deea.replying_d5deea::before {
 .divider_d5deea,
 .mention_c10249,
 .mentionsBar_eba0ba {
-	--status-danger: var(--accent-3);
+	--status-danger: var(--dnd-indicator);
 }
 
 .message_d5deea.mentioned_d5deea:before,
