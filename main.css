@@ -1,6 +1,6 @@
 /**
  * @name Nyx
- * @version 1.0.0.
+ * @version 1.2.4.
  * @description A clean, dark, modern theme for BetterDiscord / Vencord
  * @source https://github.com/Corvo2408/Nyx
  * @author Corvo2408
@@ -42,6 +42,9 @@
 	--hover: hsla(0, 0%, 40%, 0.1);
 	--active: hsla(0, 0%, 40%, 0.2);
 	--message-hover: hsla(0, 0%, 0%, 0.1);
+	/* Server Boosting Colours*/
+	--guild-boosting-blue: var(--accent-1);
+	--guild-boosting-purple: var(--dnd-indicator);
 	/* Spacing and padding */
 	--spacing: 12px;
 	/* Animations */
@@ -184,6 +187,10 @@ div.message_d5deea.replying_d5deea::before {
 	background: var(--accent-3) !important;
 }
 
+.tideButton_a25714{
+	background: linear-gradient(-8deg,var(--accent-1)-15.16%,var(--accent-5)-9.84%,rgba(43,45,49,0)50%)
+}
+
 .mention_c10249:active {
 	background: var(--accent-4);
 }
@@ -207,8 +214,6 @@ path[fill='var(--white-500)'] {
 .lookFilled_dd4f85.colorRed_dd4f85,
 .lookFilled_dd4f85.colorYellow__818c3,
 .bar_c10249,
-.wrapper_f90abb:hover .childWrapper_f90abb,
-.wrapper_f90abb.selected_ae80f7 .childWrapper_f90abb,
 .colorDefault_d90b3d.focused_d90b3d,
 .colorDefault_d90b3d.focused_d90b3d .caret_d90b3d,
 .colorDefault_d90b3d:active:not(.hideInteraction_d90b3d),
@@ -778,10 +783,17 @@ button.button_dd4f85,
 	margin: -2px calc(var(--spacing) - 4px) 0px 0px;
 }
 
-.wrapper_f90abb:hover>.childWrapper_f90abb::before,
-.wrapper_f90abb.selected_f90abb>.childWrapper_f90abb::before {
-	background: var(--text-0);
-	transform: rotate(-360deg) scale(0.8);
+
+.wrapper_f90abb:hover .childWrapper_f90abb,
+.wrapper_f90abb.selected_f90abb .childWrapper_f90abb {
+	color: var(--accent-1);
+	z-index: -1;
+}
+
+.wrapper_f90abb[role="treeitem"] .childWrapper_f90abb,
+.wrapper_f90abb[role="treeitem"]:hover .childWrapper_f90abb,
+.wrapper_f90abb[role="treeitem"].selected_f90abb .childWrapper_f90abb {
+	background: var(--accent-1),-100%;
 }
 
 .lowerBadge_c5f96a::before {
@@ -1268,6 +1280,18 @@ html.theme-light,
 	width: calc(100% + 30px);
 }
 
+.tutorialContainer_f9623d .svg_c5f96a {
+	background: url("https://raw.githubusercontent.com/Corvo2408/Nyx/main/img/crow-icon.PNG") center/contain no-repeat;
+	background-color: var(--background-secondary);
+	border-radius: var(--roundness-m) var(--roundness-m) var(--roundness-m) var(--roundness-m);
+	transition: 0.25s ease !important;
+}
+.tutorialContainer_f9623d:hover .svg_c5f96a {
+	background-color: var(--accent-3);
+	border-radius: var(--roundness-s) var(--roundness-s) var(--roundness-s) var(--roundness-s);
+	transition: 0.25s ease !important;
+}
+
 #app-mount .guilds_a4d4d9 .svg_c5f96a,
 #app-mount .guilds_a4d4d9 .wrapper_c5f96a,
 #app-mount .guilds_a4d4d9 .guildsError-b7zR5H,
@@ -1640,6 +1664,16 @@ html.theme-light,
 
 #app-mount .guilds_a4d4d9 .frame-oXWS21[class*=listItem] .wrapper__8436d {
 	height: 100% !important;
+}
+
+.tutorialContainer_f9623d .wrapper__8436d,
+.tutorialContainer_f9623d .svg_c5f96a {
+  height: 57px;
+  width: 48px;
+}
+.tutorialContainer_f9623d .wrapper__8436d foreignobject svg *,
+.tutorialContainer_f9623d .svg_c5f96a foreignobject svg * {
+  fill: none !important;
 }
 
 #app-mount .guilds_a4d4d9 .frame-oXWS21[class*=listItem] .button-Jt-tIg {
