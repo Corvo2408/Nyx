@@ -1,6 +1,6 @@
 /**
  * @name Nyx
- * @version 1.2.4.
+ * @version 1.2.5
  * @description A clean, dark, modern theme for BetterDiscord / Vencord
  * @source https://github.com/Corvo2408/Nyx
  * @author Corvo2408
@@ -1281,7 +1281,7 @@ html.theme-light,
 }
 
 .tutorialContainer_f9623d .svg_c5f96a {
-	background: url("https://raw.githubusercontent.com/Corvo2408/Nyx/main/img/crow-icon.PNG") center/contain no-repeat;
+	background: url("https://raw.githubusercontent.com/Corvo2408/Nyx/main/img/crow-icon.png") center/contain no-repeat;
 	background-color: var(--background-secondary);
 	border-radius: var(--roundness-m) var(--roundness-m) var(--roundness-m) var(--roundness-m);
 	transition: 0.25s ease !important;
