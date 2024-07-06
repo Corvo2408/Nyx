@@ -1,6 +1,6 @@
 /**
  * @name Nyx
- * @version 1.2.5
+ * @version 1.2.8
  * @description A clean, dark, modern theme for BetterDiscord / Vencord
  * @source https://github.com/Corvo2408/Nyx
  * @author Corvo2408
@@ -268,6 +268,11 @@ path[fill='var(--white-500)'] {
 	fill: var(--text-1);
 }
 
+
+section.title_a7d72e.container_e44302.title_a7d72e.themed_e44302 {
+	background-color: var(--background-primary);
+}
+
 .menu_ad5fac .menuItemFocused_ad5fac {
 	color: var(--text-3);
 }
@@ -489,6 +494,7 @@ a[href="https://support.discord.com"] {
 
 .wrapper_d880dc.fullScreen_d880dc .callContainer_d880dc {
 	margin-top: var(--spacing);
+	border-radius: var(--roundness-xl)
 }
 
 .notice__5fd4c,
@@ -515,7 +521,6 @@ a[href="https://support.discord.com"] {
 .shop_e77fa3,
 .container_d576e9,
 .container_d1c246,
-#app-mount .callContainer_d880dc,
 .chat_a7d72e,
 .animatedContainer_fd6364,
 .notice__5fd4c,
@@ -527,9 +532,7 @@ a[href="https://support.discord.com"] {
 }
 
 .container__93316,
-.chatContent_a7d72e,
 .container_cbd271,
-.members_cbd271,
 .searchResultsWrap_c2b47d,
 .profilePanel_b433b4,
 .userPanelOuter_c69a7b,
@@ -538,6 +541,7 @@ a[href="https://support.discord.com"] {
 .container_a6d69a {
 	border-radius: 0 0 var(--roundness-xl) var(--roundness-xl);
 }
+
 
 /* More rounded corners */
 
@@ -573,12 +577,16 @@ a[href="https://support.discord.com"] {
 .oneByOneGridSingle_df7417,
 .imageContainer_cf58b5 .imageWrapper__178ee,
 .markup_d6076c code,
-.itemCard_f02fcf,
 .peopleListItem_d51464:hover,
 .withTagAsButton_b2ca13:hover,
 .withTagless_b2ca13:hover,
 .messageGroupWrapper_ac90a2 {
 	border-radius: var(--roundness-m);
+}
+
+.itemCard_f02fcf {
+	border-radius: var(--roundness-m);
+	background-color: var(--background-secondary);
 }
 
 .scrollableContainer_d0696b,
@@ -1282,11 +1290,14 @@ html.theme-light,
 
 .tutorialContainer_f9623d .svg_c5f96a {
 	background: url("https://raw.githubusercontent.com/Corvo2408/Nyx/main/img/crow-icon.png") center/contain no-repeat;
+	filter: invert(0);
 	background-color: var(--background-secondary);
 	border-radius: var(--roundness-m) var(--roundness-m) var(--roundness-m) var(--roundness-m);
 	transition: 0.25s ease !important;
 }
 .tutorialContainer_f9623d:hover .svg_c5f96a {
+	background: url("https://raw.githubusercontent.com/Corvo2408/Nyx/main/img/crow-icon.png") center/contain no-repeat;
+	filter: invert(0.8);
 	background-color: var(--accent-3);
 	border-radius: var(--roundness-s) var(--roundness-s) var(--roundness-s) var(--roundness-s);
 	transition: 0.25s ease !important;
