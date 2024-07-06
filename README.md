@@ -16,7 +16,7 @@
 [![Issues][issues-badge]][issues-link]
 [![Pull Requests][prs-badge]][prs-link]
 
-![Nyx](https://github.com/Corvo2408/Nyx/blob/main/img/scr_1.0.0.PNG)
+![Nyx](https://github.com/Corvo2408/Nyx/blob/main/img/scr_1.2.0.PNG)
 
 </div>
 
