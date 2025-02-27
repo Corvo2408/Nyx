@@ -81,3 +81,9 @@
     width: 100%;
     height: 100%;
 }
+
+.container__37e49 /* user panel button strikethroughs */,
+.numberBadge__2b1f5  /* unread number badge */,
+.toolbar__9293f /* toolbar button strikethroughs */ {
+	--status-danger: var(--dnd-indicator);
+}
