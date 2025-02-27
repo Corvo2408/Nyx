@@ -1,13 +1,14 @@
 /**
  * @name Nyx
+ * @version 2.0.0
  * @description A clean, dark, modern theme for BetterDiscord / Vencord
  * @source https://github.com/Corvo2408/Nyx
  * @author Corvo2408
 */
 
+/* import theme modules */
 @import url(https://corvo2408.github.io/Nyx/main.css);
 
-/* Settings */
 :root {
 	/* Font customization */
 	--font: 'Roboto'; /* Set To 'gg sans' to revert to the default Discord font
@@ -54,4 +55,22 @@
 	--roundness-s: 12px;
 	--roundness-xs: 10px;
 	--roundness-xxs: 8px;
+
+	--moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Crow_%2825964%29_-_The_Noun_Project.svg'); /* custom icon url */
+
+	/*Boosting Colours*/
+	--guild-boosting-blue: var(--accent-1);
+	--guild-boosting-purple: var(--dnd-indicator);
+
+	/* Filters for uncolorable elements */
+	--login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4);
+	--green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43);
+	--blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84) brightness(1.2);
+	
+	/* Server bar customizations */
+	--server-size: var(--HSL-server-icon-size, var(--HSL-size, 35px));
+	--server-spacing: var(--HSL-server-spacing, var(--HSL-spacing, 10px));
+	--server-container: calc(var(--server-size) + 20px);
+	--server-direction: var(--HSL-server-direction, column);
+	--server-alignment: var(--HSL-server-alignment, flex-start);
 }

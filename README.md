@@ -20,9 +20,15 @@
 
 </div>
 
+## About
+
+A clean, dark, mordern Discord theme for BetterDiscord / Vencord.
+A modified combination of [midnight by refact0r](https://github.com/refact0r/midnight-discord) and [HorizontalServerList by DiscordStyles](https://github.com/refact0r/midnight-discord) with some colour and font changes and other tweaks.
+
+
 ## Installation
 
-Download the theme file from [the BetterDiscord Website](https://betterdiscord.app/theme/Nyx) or [releases](https://github.com/Corvo2408/Nyx/releases) and move it into your platforms's themes folder:
+Download the theme file from [releases](https://github.com/Corvo2408/Nyx/releases) and move it into your platforms's themes folder:
 
 - BetterDiscord: `%appdata%\betterdiscord\themes`
 - Vencord: `%appdata%\vencord\themes`
