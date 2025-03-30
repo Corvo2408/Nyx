@@ -8,61 +8,64 @@
 
 /* import theme modules */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://refact0r.github.io/midnight-discord/midnight.theme.css');
-@import url('https://discordstyles.github.io/HorizontalServerList/dist/HorizontalServerList.css');
+@import url('https://refact0r.github.io/midnight-discord/build/midnight.css');
+@import url('https://discordstyles.github.io/HorizontalServerList/HorizontalServerList.css');
+
+body {
+	/* animation/transition options */
+    --animations: on; /* turn off to disable all midnight animations/transitions */
+    --list-item-transition: 0.2s ease; /* transition for list items */
+    --dms-icon-svg-transition: 0.4s ease; /* transition for the dms icon */
+
+    /* top bar options */
+    --move-top-bar-buttons: off; /* turn on to move inbox button to the server list (recommend setting top bar height to 24px) */
+    --custom-app-top-bar-height: 32px; /* height of the titlebar/top bar (default is 36px)*/
+
+    /* window controls */
+    --custom-window-controls: off; /* turn off to use discord default window controls */
+    --window-control-size: 14px; /* size of custom window controls */
+
+    /* dms button icon options */
+    --dms-icon: on; /* set to default to use discord icon, on to use custom icon, off to disable completely */
+	--dms-icon-svg-size: 100%; /* size of the svg (css mask-size) */
+    --dms-icon-color-before: var(--icon-secondary); /* normal icon color */
+    --dms-icon-color-after: var(--white); /* icon color when button is hovered/selected */
+
+    /* dms button background options */
+    --dms-background: off; /* off to disable, image to use a background image, color to use a custom color/gradient */
+    --dms-background-image-url: url(''); /* url of the background image */
+    --dms-background-image-size: cover; /* size of the background image (css background-size) */
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2)); /* fixed color/gradient (css background) */
+
+    /* background image options */
+    --background-image: off; /* turn on to use a background image */
+    --background-image-url: url(''); /* url of the background image */
+
+    /* transparency/blur options */
+    /* NOTE: TO USE TRANSPARENCY/BLUR, YOU MUST HAVE TRANSPARENT BG COLORS. FOR EXAMPLE: --bg-4: hsla(220, 15%, 10%, 0.7); */
+    --transparency-tweaks: off; /* turn on to remove some elements for better transparency */
+    --remove-bg-layer: off; /* turn on to remove the base --bg-3 layer for use with window transparency (WILL OVERRIDE BACKGROUND IMAGE) */
+    --panel-blur: off; /* turn on to blur the background of panels */
+    --blur-amount: 12px; /* amount of blur */
+    --bg-floating: var(--bg-3); /* you can set this to a more opaque color if floating panels look too transparent */
+
+    /* chatbar options */
+    --flipped-chatbar: on; /* turn on to move the typing indicator above the chatbar */
+    --chatbar-height: 47px; /* height of the chatbar (52px by default, 47px to align it with the user panel) */
+    --chatbar-padding: 8px; /* padding of the chatbar */
+
+    /* other options */
+    --small-user-panel: off; /* turn on to make the user panel smaller like in old discord */
+
+}
+
+
 
 :root {
-	/* Font customization */
-	--font: 'Roboto'; /* Set To 'gg sans' to revert to the default Discord font
-	/* Top left corner text */
-	--corner-text: 'Nyx';
-	/* Status indicators and window controls */
-	--online-indicator: hsl(115, 100%, 50%);
-	--dnd-indicator: hsl(0, 100%, 50%);
-	--idle-indicator: hsl(50, 100%, 50%);
-	--streaming-indicator: hsl(260, 75%, 54%);
-	/* Accent colors */
-	--accent-1: hsl(0, 0%, 60%);
-	--accent-2: hsl(0, 0%, 48%);
-	--accent-3: hsl(0, 0%, 42%);
-	--accent-4: hsl(0, 0%, 36%);
-	--accent-5: hsl(0, 0%, 30%);
-	--mention: hsla(0, 0%, 52%, 0.1);
-	--mention-hover: hsla(0, 0%, 52%, 0.05);
-	/* Text colors */
-	--text-0: white;
-	--text-1: var(--text-2);
-	--text-2: hsl(0, 0%, 100%);
-	--text-3: hsl(0, 0%, 79%);
-	--text-4: hsl(0, 0%, 59%);
-	--text-5: hsl(0, 0%, 25%);
-	/* Background and dark colors */
-	--bg-1: hsl(0, 0%, 20%);
-	--bg-2: hsl(0, 0%, 16%);
-	--bg-3: hsl(0, 0%, 13%);
-	--bg-4: hsl(0, 0%, 10%);
-	--hover: hsla(0, 0%, 40%, 0.1);
-	--active: hsla(0, 0%, 40%, 0.2);
-	--message-hover: hsla(0, 0%, 0%, 0.1);
-	/* Spacing and padding */
-	--spacing: 12px;
-	/* Animations */
-	--list-item-transition: 0.2s ease;
-	--unread-bar-transition: 0.2s ease;
-	--icon-spin-transition: 1s ease;
-	/* Corner roundness (border-radius) */
-	--roundness-xl: 22px;
-	--roundness-l: 20px;
-	--roundness-m: 16px;
-	--roundness-s: 12px;
-	--roundness-xs: 10px;
-	--roundness-xxs: 8px;
-
-	--moon-icon-url: url('https://upload.wikimedia.org/wikipedia/commons/8/82/Crow_%2825964%29_-_The_Noun_Project.svg'); /* custom icon url */
 
 	/*Boosting Colours*/
 	--guild-boosting-blue: var(--accent-1);
-	--guild-boosting-purple: var(--dnd-indicator);
+	--guild-boosting-purple: var(--dnd);
 
 	/* Filters for uncolorable elements */
 	--login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4);
@@ -75,6 +78,11 @@
 	--server-container: calc(var(--server-size) + 20px);
 	--server-direction: var(--HSL-server-direction, column);
 	--server-alignment: var(--HSL-server-alignment, flex-start);
+
+	--mention: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 90%) 40%, transparent); /* background of messages that mention you */
+	--mention-hover: linear-gradient(to right, color-mix(in hsl, var(--accent-2), transparent 95%) 40%, transparent); /* background of messages that mention you when hovered */
+	--reply: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 90%) 40%, transparent); /* background of messages that reply to you */
+	--reply-hover: linear-gradient(to right, color-mix(in hsl, var(--text-3), transparent 95%) 40%, transparent); /* background of messages that reply to you when hovered */
 }
 
 .childWrapper__6e9f8:has(> svg:not(.favoriteIcon_c9fddf))::before {
@@ -85,5 +93,5 @@
 .container__37e49 /* user panel button strikethroughs */,
 .numberBadge__2b1f5  /* unread number badge */,
 .toolbar__9293f /* toolbar button strikethroughs */ {
-	--status-danger: var(--dnd-indicator);
+	--status-danger: var(--dnd);
 }
