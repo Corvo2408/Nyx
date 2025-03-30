@@ -1,6 +1,6 @@
 /**
  * @name Nyx
- * @version 2.0.0
+ * @version 2.1.0
  * @description A clean, dark, modern theme for BetterDiscord / Vencord
  * @source https://github.com/Corvo2408/Nyx
  * @author Corvo2408
@@ -22,6 +22,10 @@ body {
 }
 
 :root {
+    /*Horizontal Server List*/
+    --HSL-server-direction: column; /* Direction of the server list. | OPTIONS: column, column-reverse | DEFAULT: column */
+    --HSL-server-alignment: flex-start; /* Alignment of the server list. | OPTIONS: flex-start, center, flex-end | DEFAULT: flex-start */
+
 	/* Text colors */
 	--text-0: white;
 	--text-1: var(--text-2);
